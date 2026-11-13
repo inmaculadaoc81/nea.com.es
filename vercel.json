@@ -1,0 +1,83 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "functions": {
+    "api/nea.js": {
+      "maxDuration": 15
+    }
+  },
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:s(internacional|opinion|espana|economia|sociedad|educacion|clima-y-medio-ambiente|ciencia|tecnologia|salud-y-bienestar|cultura|deportes|gente|estilo|television)/",
+      "destination": "/:s",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/nea?r=portada"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/nea?r=sitemap"
+    },
+    {
+      "source": "/news-sitemap.xml",
+      "destination": "/api/nea?r=news"
+    },
+    {
+      "source": "/rss.xml",
+      "destination": "/api/nea?r=rss"
+    },
+    {
+      "source": "/rss/:s.xml",
+      "destination": "/api/nea?r=rss&s=:s"
+    },
+    {
+      "source": "/:p(quienes-somos|politica-editorial|aviso-legal|privacidad|cookies)",
+      "destination": "/api/nea?r=pagina&p=:p"
+    },
+    {
+      "source": "/:s(internacional|opinion|espana|economia|sociedad|educacion|clima-y-medio-ambiente|ciencia|tecnologia|salud-y-bienestar|cultura|deportes|gente|estilo|television)",
+      "destination": "/api/nea?r=seccion&s=:s"
+    },
+    {
+      "source": "/:s(internacional|opinion|espana|economia|sociedad|educacion|clima-y-medio-ambiente|ciencia|tecnologia|salud-y-bienestar|cultura|deportes|gente|estilo|television)/:slug",
+      "destination": "/api/nea?r=articulo&s=:s&slug=:slug"
+    },
+    {
+      "source": "/((?!api/|assets/).*)",
+      "destination": "/api/nea?r=404"
+    }
+  ]
+}

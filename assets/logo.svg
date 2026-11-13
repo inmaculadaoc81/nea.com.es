@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 60" role="img" aria-label="NEA">
+  <title>NEA</title>
+  <g fill="none" stroke="#111418" stroke-width="9">
+    <path d="M6.5 56V8M6.5 30a17.5 17.5 0 0 1 35 0V56"/>
+    <path d="M52 34H95.5A21.75 21.75 0 1 0 89.1 49.4"/>
+    <circle cx="125" cy="34" r="21.75"/>
+    <path d="M151.25 8V56"/>
+  </g>
+  <rect x="160" y="47" width="10" height="10" fill="#D6402B"/>
+</svg>

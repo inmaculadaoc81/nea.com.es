@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://nea.com.es/sitemap.xml
+Sitemap: https://nea.com.es/news-sitemap.xml
