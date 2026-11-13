@@ -380,3 +380,23 @@ button { font: inherit; }
 .foto-texto img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--suave); border-radius: 4px; }
 .foto-texto figcaption { padding-top: 8px; font: 400 13px/1.4 var(--sans); color: var(--gris); border-bottom: 1px solid var(--linea); padding-bottom: 10px; }
 .texto .foto-texto figcaption a { color: var(--gris); text-decoration-color: var(--linea); }
+
+/* ── Móvil: botón «Ver todas las secciones» en lugar de la barra con scroll, y «Lo último» con «Ver más» ── */
+.btn-secs { display: none; }
+.ult-mas { display: none; }
+@media (min-width: 601px) {
+  .ultima li:nth-child(n+11) { display: none; }
+}
+@media (max-width: 600px) {
+  .secs ul { display: none; }
+  .secs .wrap { padding-top: 8px; padding-bottom: 8px; }
+  .btn-secs { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; padding: 11px 14px; border: 1px solid var(--linea); border-radius: 10px; background: var(--suave); color: var(--tinta); font: 600 14.5px/1 var(--sans); cursor: pointer; }
+  .btn-secs .ic { color: var(--acento); font-size: 17px; }
+  .btn-secs .ic:last-child { color: var(--tinta); margin-left: auto; }
+  .btn-secs span { margin-right: auto; }
+  .btn-secs:active { background: var(--linea); }
+  .ultima li.despues:not(.visible) { display: none; }
+  .ult-mas { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 14px; padding: 12px; border: 1px solid var(--tinta); border-radius: 999px; background: #fff; color: var(--tinta); font: 600 14px/1 var(--sans); cursor: pointer; }
+  .ult-mas:active { background: var(--tinta); color: #fff; }
+  .ult-mas[hidden] { display: none; }
+}
