@@ -374,3 +374,9 @@ button { font: inherit; }
   .bloque-ic { width: 30px; height: 30px; padding: 6px; }
   .vacio { flex-direction: column; align-items: flex-start; }
 }
+
+/* Fotos dentro del texto del artículo */
+.foto-texto { margin: 1.8em 0; }
+.foto-texto img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--suave); border-radius: 4px; }
+.foto-texto figcaption { padding-top: 8px; font: 400 13px/1.4 var(--sans); color: var(--gris); border-bottom: 1px solid var(--linea); padding-bottom: 10px; }
+.texto .foto-texto figcaption a { color: var(--gris); text-decoration-color: var(--linea); }
