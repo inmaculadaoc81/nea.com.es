@@ -76,6 +76,10 @@
       "destination": "/api/nea?r=articulo&s=:s&slug=:slug"
     },
     {
+      "source": "/blog/:slug",
+      "destination": "/api/nea?r=articulo&s=blog&slug=:slug"
+    },
+    {
       "source": "/((?!api/|assets/).*)",
       "destination": "/api/nea?r=404"
     }

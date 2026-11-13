@@ -13,7 +13,7 @@ Variables de entorno (Vercel):
 
 | Variable | Valor | Nota |
 |---|---|---|
-| `NEA_ORG` | `nea` | **Solo cuando exista la organización en Agentes V2.** Vacía = portada «muy pronto», sin consultar la API. |
+| `NEA_ORG` | `nea` | Opcional: por defecto `nea` (org 81 de Agentes V2, ya creada en modo «medio»). |
 | `KELATOS_BLOG_API` | (opcional) | Por defecto `https://db.affirmatechnology.com/kelatos-api/publico/blog`. |
 
 Estrategia SEO y reglas para el agente IA: ver [SEO.md](SEO.md).
